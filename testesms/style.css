@@ -1223,4 +1223,92 @@ footer .link{
     footer {
         padding: 40px 20px;
     }
+    @media (max-width: 768px) {
+
+    /* ===== AGENDA ===== */
+    #agenda {
+        padding: calc(var(--nav-h) + 24px) 16px 70px;
+    }
+
+    .agenda-title {
+        font-family: 'HarryP', serif;
+        font-size: clamp(44px, 15vw, 100px);
+        text-wrap: balance;
+    }
+
+    .location-icon {
+        width: clamp(52px, 14vw, 80px);
+        height: clamp(52px, 14vw, 80px);
+    }
+
+    .agendaContent .location-text1,
+    .agendaContent .location-text2 {
+        font-family: 'IMFellEnglish', serif;
+        font-size: clamp(18px, 5.5vw, 30px);
+        line-height: 1.25;
+    }
+
+    .agenda-btn {
+        display: block;
+        width: 100%;
+        max-width: 340px;
+        font-size: clamp(16px, 4.6vw, 24px);
+        padding: 14px 20px;
+    }
+
+    /* ===== FOOTER / CONTACT ===== */
+    footer {
+        padding: 40px 20px;
+    }
+
+    .Contact-title {
+        font-family: 'HarryP', serif;
+        font-size: clamp(30px, 9vw, 46px);
+    }
+
+    .contact-para {
+        font-family: 'IMFellEnglish', serif;
+        font-size: clamp(15px, 4.2vw, 20px);
+        line-height: 1.4;
+    }
+
+    .infos {
+        margin-inline: 0;
+    }
+
+    .footer-title {
+        font-family: 'HarryP', serif;
+        font-size: clamp(24px, 7vw, 30px);
+    }
+
+    footer .link,
+    .contact-roles,
+    .followus {
+        font-size: clamp(13px, 3.6vw, 15px);
+    }
+
+    .contact-roles {
+        margin-bottom: 40px;
+    }
+
+    .details-list li {
+        font-size: clamp(14px, 3.8vw, 15px);
+        text-align: center;
+    }
+
+    .icons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .voltlogo {
+        height: clamp(70px, 20vw, 100px);
+        width: auto;
+    }
+
+    .cse {
+        height: auto;
+        width: clamp(140px, 40vw, 200px);
+    }
+}
 }
