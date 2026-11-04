@@ -224,7 +224,6 @@ a, p, h1, h2, h3, h4, h5, div, button {
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    background: url('images/background.png') center / 100% 100% no-repeat;
     padding: 40px 28px;
 }
 
@@ -513,6 +512,8 @@ a, p, h1, h2, h3, h4, h5, div, button {
     pointer-events: none;
 }
 
+/*================================== about =====================================*/
+
 #about {
     padding: calc(var(--nav-h) + 60px) 20px 110px;
     padding-top: 40px;
@@ -542,12 +543,14 @@ a, p, h1, h2, h3, h4, h5, div, button {
     line-height: 1.4;
     padding: 20px;
     border-radius: 10px;
-    border: 4px solid rgb(250, 170, 10);
-    transition: border-color .3s;
+    border: 4px solid red;
+    transition: .5s;
 }
 
 .presentation:hover {
-    border-color: rgb(255, 0, 0);
+    border-color: rgb(250, 170, 10);
+    background: rgba(51, 19, 1, 0.9);
+    color: rgb(249, 197, 83);
 }
 
 .p6 {
