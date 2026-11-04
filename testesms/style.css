@@ -1014,6 +1014,63 @@ footer .link{
     flex-direction: lign;
     gap: 15px;
 }
+/* ===== s3 separator: same look as the agenda page, pinned to the bottom ===== */
+.separation.s3 {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);   /* sits on the section's bottom edge */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0;
+    padding-inline: 20px;
+    z-index: 2;
+}
+
+.separation.s3 .pitch,
+.separation.s3::after {
+    display: none;
+}
+
+.separation.s3 .lines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* the two lines stretch to fill the space beside the rings */
+.separation.s3 .line,
+.separation.s3 .line:hover {
+    position: static;
+    flex: 1;
+    width: auto;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+    background-color: #ffffff;
+}
+
+.separation.s3 .rings {
+    width: 150px;
+    height: auto;
+    margin: 0 20px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .separation.s3 .rings {
+        width: 80px;
+        margin: 0 10px;
+    }
+}
 
 @media (max-width: 359px) {
     .phaseGrid {
