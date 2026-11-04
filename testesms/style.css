@@ -209,138 +209,6 @@ a, p, h1, h2, h3, h4, h5, div, button {
     100% { top: -100%; }
 }
 
-/* ============================== register ============================= */
-
-.regPage {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding-top: var(--nav-h);
-}
-
-.regWrap {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    background: url('images/background.png') center / 100% 100% no-repeat;
-    padding: 40px 28px;
-}
-
-.regCardCont {
-    position: relative;
-    isolation: isolate;          
-    width: min(95%, 1100px);
-    min-height: 60vh;            
-    padding: clamp(60px, 14%, 110px) clamp(40px, 12%, 90px);  
-}
-
-.regCard {
-    position: absolute;          
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: fill;            
-    z-index: -1;                 
-}
-
-.regBlack,
-.cardTitle {
-    margin: 0 0 12px;
-    text-align: center;
-}
-
-.regBlack  { 
-    color: black; 
-    font-family: 'Cinzel';
-    font-size: 10px;
-}
-
-.cardTitle { 
-    color: rgb(135, 4, 4); 
-    font-family: 'harryP', serif; 
-    font-size: 22px;
-}  
-
-.inputGrid {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 20px;
-}
-
-.regInput {
-    border: 2px solid black;
-    height: 30px;
-    background: transparent;
-    color: white;
-    font-family: 'Cezil';
-    box-shadow: none;
-}
-
-.regInput::placeholder {
-    color: rgb(152, 15, 15); 
-    font-family: 'Cezil';
-    opacity: 1; 
-}
-
-.regInput:focus {
-    border-color: yellow;
-    box-shadow: none;
-    background: rgb(33, 10, 1);
-}
-
-.rb2 {
-    font-size: 23px;
-    margin-top: 20px;
-}
-
-.roleGrid {
-    display: grid;
-    margin-top: 20px;
-    font-family: 'Cezil';
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(129, 7, 7);
-    gap: 10px;
-    justify-content: center;
-}
-
-.vaultCheckLabel {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-}
-
-.vaultCheckbox {
-    appearance: none; 
-    -webkit-appearance: none;
-    width: 22px;
-    height: 22px;
-    background: transparent;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 4px;
-    cursor: pointer;
-    position: relative;
-    transition: 0.3s;
-    flex: none;
-}
-
-.vaultCheckbox:checked::after {
-    content: '✓';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(255, 0, 0);
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-/*================================ home =============================*/
-
 #home {
     display: flex;
     flex-direction: column;
@@ -513,8 +381,6 @@ a, p, h1, h2, h3, h4, h5, div, button {
     pointer-events: none;
 }
 
-/*==============================about=============================*/
-
 #about {
     padding: calc(var(--nav-h) + 60px) 20px 110px;
     padding-top: 40px;
@@ -544,14 +410,12 @@ a, p, h1, h2, h3, h4, h5, div, button {
     line-height: 1.4;
     padding: 20px;
     border-radius: 10px;
-    border: 4px solid red;
-    transition: .5s;
+    border: 4px solid rgb(250, 170, 10);
+    transition: border-color .3s;
 }
 
 .presentation:hover {
-    border-color: rgb(250, 170, 10);
-    background: rgba(51, 19, 1, 0.9);
-    color: rgb(249, 197, 83);
+    border-color: rgb(255, 0, 0);
 }
 
 .p6 {
@@ -873,11 +737,35 @@ footer{
 }
 
 .infos{
-    display:flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
     gap: 20px;
-    margin-left: 200px;
-    margin-right: 200px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.contact-list{
+    display: none;
+}
+.follow-us,
+.links,
+.Details{
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 12px;
+}
+
+.details-list{
+    align-items: center;
+    gap: 12px;
+}
+
+.details-list li{
+    text-align: center;
+}
+.voltlogo{
+    margin-top: -17px;
 }
 
 .Details{
@@ -1135,46 +1023,6 @@ footer .link{
     .desc {
         max-width: min(900px, 55vw);
         font-size: clamp(15px, 2vw, 45px);
-    }
-
-    /* ===============================registraation======================*/
-
-    .regBlack {
-        font-size: clamp(15px, 2vw, 60px);
-    }
-
-    .cardTitle {
-        font-size: clamp(26px, 8vw, 70px)
-    }
-
-    .inputGrid {
-        grid-template-columns: 1fr 1fr;
-        height: auto;
-    }
-
-    .regInput {
-        height: clamp(15px, 3vw, 60px);
-        font-size: clamp(15px, 2vw, 60px);
-    }
-
-    .rb2 {
-        margin: 0;
-        font-size: clamp(15px, 3vw, 60px);
-    }
-
-    .roleGrid {
-        grid-template-columns: repeat(2, max-content);
-        justify-content: center;
-        column-gap: clamp(30px, 6vw, 100px);
-    }
-
-    .vaultCheckLabel:last-child {
-        grid-column: 1 / -1;
-        justify-self: center;
-    }
-
-    .vaultCheckLabel {
-        font-size: clamp(15px, 2vw, 60px);
     }
 }
 
