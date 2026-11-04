@@ -1000,6 +1000,46 @@ footer .link{
         max-width: min(900px, 55vw);
         font-size: clamp(15px, 2vw, 45px);
     }
+
+    /* ===============================registraation======================*/
+
+    .regBlack {
+        font-size: clamp(15px, 2vw, 60px);
+    }
+
+    .cardTitle {
+        font-size: clamp(26px, 8vw, 70px)
+    }
+
+    .inputGrid {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+    }
+
+    .regInput {
+        height: clamp(15px, 3vw, 60px);
+        font-size: clamp(15px, 2vw, 60px);
+    }
+
+    .rb2 {
+        margin: 0;
+        font-size: clamp(15px, 3vw, 60px);
+    }
+
+    .roleGrid {
+        grid-template-columns: repeat(2, max-content);
+        justify-content: center;
+        column-gap: clamp(30px, 6vw, 100px);
+    }
+
+    .vaultCheckLabel:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    .vaultCheckLabel {
+        font-size: clamp(15px, 2vw, 60px);
+    }
 }
 
 @media screen and (max-width: 768px) {
