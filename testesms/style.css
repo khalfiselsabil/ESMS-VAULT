@@ -209,6 +209,138 @@ a, p, h1, h2, h3, h4, h5, div, button {
     100% { top: -100%; }
 }
 
+/* ============================== register ============================= */
+
+.regPage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--nav-h);
+}
+
+.regWrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background: url('images/background.png') center / 100% 100% no-repeat;
+    padding: 40px 28px;
+}
+
+.regCardCont {
+    position: relative;
+    isolation: isolate;          
+    width: min(95%, 1100px);
+    min-height: 60vh;            
+    padding: clamp(60px, 14%, 110px) clamp(40px, 12%, 90px);  
+}
+
+.regCard {
+    position: absolute;          
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;            
+    z-index: -1;                 
+}
+
+.regBlack,
+.cardTitle {
+    margin: 0 0 12px;
+    text-align: center;
+}
+
+.regBlack  { 
+    color: black; 
+    font-family: 'Cinzel';
+    font-size: 10px;
+}
+
+.cardTitle { 
+    color: rgb(135, 4, 4); 
+    font-family: 'harryP', serif; 
+    font-size: 22px;
+}  
+
+.inputGrid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.regInput {
+    border: 2px solid black;
+    height: 30px;
+    background: transparent;
+    color: white;
+    font-family: 'Cezil';
+    box-shadow: none;
+}
+
+.regInput::placeholder {
+    color: rgb(152, 15, 15); 
+    font-family: 'Cezil';
+    opacity: 1; 
+}
+
+.regInput:focus {
+    border-color: yellow;
+    box-shadow: none;
+    background: rgb(33, 10, 1);
+}
+
+.rb2 {
+    font-size: 23px;
+    margin-top: 20px;
+}
+
+.roleGrid {
+    display: grid;
+    margin-top: 20px;
+    font-family: 'Cezil';
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(129, 7, 7);
+    gap: 10px;
+    justify-content: center;
+}
+
+.vaultCheckLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.vaultCheckbox {
+    appearance: none; 
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+    flex: none;
+}
+
+.vaultCheckbox:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 0, 0);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*================================ home =============================*/
+
 #home {
     display: flex;
     flex-direction: column;
