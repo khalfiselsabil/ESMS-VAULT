@@ -735,8 +735,11 @@ a, p, h1, h2, h3, h4, h5, div, button {
     font-family: 'Cinzel', serif;
 }
 
+/*========================== agenda ===========================*/
+
 #agenda {
     padding: calc(var(--nav-h) + 40px) 20px 110px;
+    padding-top: 40px;
 }
 
 .agendaContent {
