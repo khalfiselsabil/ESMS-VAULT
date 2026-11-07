@@ -1135,11 +1135,6 @@ footer .link{
         font-size: clamp(15px, 2.8vw, 150px);
     }
 
-    .pitch, 
-    .separation::after {
-        display: none;
-    }
-
     .separation {
         position: absolute;
         left: 50%;
@@ -1320,9 +1315,6 @@ footer .link{
     .agenda-title {
         font-size: 100px;
     }
-
-
-    
 
     footer {
         padding: 40px 20px;
