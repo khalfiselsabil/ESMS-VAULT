@@ -1100,8 +1100,8 @@ footer .link{
 }
 
 @media (min-width: 769px) {
-    #about {
-        padding-top: 40px;
+    #about, #agenda {
+        padding-top: 80px;
     }
 
     .menuIcon { 
@@ -1133,6 +1133,10 @@ footer .link{
 
     .tagline {
         font-size: clamp(15px, 2.8vw, 150px);
+    }
+
+    .pitch {
+        display: none;
     }
 
     .separation {
