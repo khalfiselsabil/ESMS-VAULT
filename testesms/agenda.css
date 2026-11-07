@@ -105,28 +105,52 @@ body {
 }
 
 .separation {
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    width: 100%;
-    max-width: 900px;
-    margin: 40px auto;
-}
-
-.divider-line {
-    flex: 1; 
-    height: 1px;
-    background-color: #ffffff; /* The line color */
-    border: none; /* Removes any accidental borders */
-    padding: 0; /* Removes any accidental padding */
-    margin: 0;
+    position: relative;
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: calc(min(100vw, 400px) * 0.28);   
 }
 
 .rings {
-    width: 150px; /* Adjust the size of your rings image */
+    display: block;
+    width: 64px;
     height: auto;
-    margin: 0 20px; /* Adds space between the image and the lines */
-    flex-shrink: 0; /* Prevents the image from squishing */
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    width: 35vw;
+    height: 1px;
+    background-color: rgb(165, 162, 162);
+}
+
+.L { right: calc(100% + 8px); }
+.R { left: calc(100% + 8px); }
+
+.pitch {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-50%);
+    width: min(100vw, 400px);
+    height: auto;
+    pointer-events: none;
+}
+
+.separation::after {
+    content: "";
+    position: absolute;
+    top: calc(50% + 28px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 36px;
+    background: conic-gradient(#d3a63a 25%, #710814 0 50%, #d3a63a 0 75%, #710814 0) 0 0 / 36px 36px;
+    opacity: 0.85;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
+    pointer-events: none;
 }
 @media (max-width: 600px) {
   body {
