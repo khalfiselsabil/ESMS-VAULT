@@ -627,6 +627,21 @@ a, p, h1, h2, h3, h4, h5, div, button {
     padding-bottom: 50px;
 }
 
+.phaseGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));   
+}
+
+.phase {
+    padding: 12px 10px 48px;
+}
+
+.h6 {
+    gap: 6px;
+    font-size: clamp(11px, 3.3vw, 15px);                
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
 .phase {
     position: relative;
     padding: 14px 14px 52px;
